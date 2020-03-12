@@ -8,8 +8,8 @@ const Review = props => {
                 <h5 className="card-title">{props.task.title}</h5>
                 <h6 className="card-subtitle mb-2 text-muted">ID: {props.task.id} </h6>
                 <p className="card-text">Type: {props.task.type}</p>
-                <a href="#" className="card-link"> &lt; More Work Required</a><br/>
-                <a href="#" className="card-link"> Mark Done ></a>
+                <a href="#" onClick={() => props.markDown(props.task)} className="card-link"> &lt; More Work Required</a><br/>
+                <a href="#" onClick={() => props.markUp(props.task)} className="card-link"> Mark Done ></a>
 
             </div>
         </div>
