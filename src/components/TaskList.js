@@ -66,9 +66,9 @@ class TaskList extends React.Component {
             <ul className="list-group list-group-horizontal">
                 <li className="list-group-item list-group-item-secondary"><h3>To Do</h3> <ul className="list-group"> <li>{ ToDoList }</li></ul> </li>
 
-                <li className="list-group-item list-group-item-secondary"><h3>In Progress</h3> <ul className="list-group"> <li>{ InProgressList }</li></ul> </li>
+                <li className="list-group-item list-group-item"><h3>In Progress</h3> <ul className="list-group"> <li>{ InProgressList }</li></ul> </li>
                 <li className="list-group-item list-group-item-secondary"><h3>Review</h3> <ul className="list-group"> <li>{ ReviewList }</li></ul> </li>
-                <li className="list-group-item list-group-item-secondary"><h3>Done</h3> <ul className="list-group"> <li>{ DoneList }</li></ul> </li>
+                <li className="list-group-item list-group-item"><h3>Done</h3> <ul className="list-group"> <li>{ DoneList }</li></ul> </li>
 
 
 
