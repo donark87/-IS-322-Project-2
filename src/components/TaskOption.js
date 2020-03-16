@@ -6,19 +6,31 @@ class TaskOption extends React.Component {
         super(props);
         this.state = {value: ''};
 
-        this.handleChange = this.handleChange.bind(this);
+        this.handleSort = this.handleSort.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
-
+        this.handleStatus = this.handleStatus.bind(this);
+        this.handleType = this.handleType.bind(this);
     }
-   handleChange(event) {
-        this.setState({value: event.target.value});
-       this.props.orderBy(event.target.value, this.props.tasks);
-   }
-
-
     handleSubmit(event) {
         this.props.orderBy(event.target.value);
     }
+
+    handleSort(event) {
+        this.setState({value: event.target.value});
+       this.props.orderBy(event.target.value);
+   }
+
+    handleStatus(event){
+
+        this.setState({value: event.target.value});
+        this.props.filterByStatus(event.target.value);
+   }
+    handleType(event){
+
+        this.setState({value: event.target.value});
+        this.props.filterByType(event.target.value);
+    }
+
 
 
     render() {
@@ -30,7 +42,7 @@ class TaskOption extends React.Component {
                 <div className="form-row align-items-center">
                     <div className="col-auto my-1">
                         <label className="mr-sm-1" htmlFor="inlineFormCustomSelect">Sort</label>
-                        <select className="custom-select mr-sm-1" value={this.state.value} onChange={this.handleChange} name="sortBy" id="sortBy"
+                        <select className="custom-select mr-sm-1" value={this.state.value} onChange={this.handleSort} name="sortBy" id="sortBy"
                                 id="inlineFormCustomSelect">
                             <option selected>Choose...</option>
                             <option value="title">Title</option>
@@ -40,21 +52,21 @@ class TaskOption extends React.Component {
                     </div>
                     <div className="col-auto my-1">
                         <label className="mr-sm-1" htmlFor="inlineFormCustomSelect">Status</label>
-                        <select className="custom-select mr-sm-1" id="inlineFormCustomSelect">
+                        <select className="custom-select mr-sm-1" value={this.state.value} onChange={this.handleStatus} id="inlineFormCustomSelect">
                             <option selected>Choose...</option>
-                            <option value="1">To Do</option>
-                            <option value="2">In Progress</option>
-                            <option value="3">Review</option>
-                            <option value="4">Done</option>
+                            <option value="todo">To Do</option>
+                            <option value="in-progress">In Progress</option>
+                            <option value="review">Review</option>
+                            <option value="done">Done</option>
                         </select>
                     </div>
                     <div className="col-auto my-1">
                         <label className="mr-sm-1" htmlFor="inlineFormCustomSelect">Type</label>
-                        <select className="custom-select mr-sm-1" id="inlineFormCustomSelect">
+                        <select className="custom-select mr-sm-1" value={this.state.value} onChange={this.handleType} id="inlineFormCustomSelect">
                             <option selected>Choose...</option>
-                            <option value="1">Task</option>
-                            <option value="2">Feature</option>
-                            <option value="3">Bug</option>
+                            <option value="task">Task</option>
+                            <option value="feature">Feature</option>
+                            <option value="bug">Bug</option>
 
                         </select>
                     </div>
