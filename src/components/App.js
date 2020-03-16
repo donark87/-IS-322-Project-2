@@ -4,6 +4,7 @@ import axios from 'axios';
 import PageTabs from './PageTabs';
 import TaskList from "./TaskList";
 import ListView from "./ListView";
+import AddTask from "./AddTask"
 //import Page1 from './Page1';
 //import Page2 from './Page2';
 //import Page3 from './Page3';
@@ -29,17 +30,18 @@ class App extends React.Component {
     });
   }
 
-  onAddTask = (taskName) => {
+  onAddTask = (taskName,taskValue) => {
     let tasks = this.state.tasks;
     tasks.push({
-      title: taskName,
       id: this.state.tasks.length + 1,
-      type: 'task',
+      title: taskName,
+      type: taskValue,
       column: 'todo'
     });
 
     this.setState({ tasks });
   }
+
   onUpdateTaskList = (newTaskList) => {
     this.setState({ tasks: newTaskList });
   }
@@ -73,7 +75,7 @@ class App extends React.Component {
         ));
       case 'page3':
         return (this.wrapPage(
-          //  <Page3 />
+           <AddTask tasks={this.state.tasks} onSubmit={this.onAddTask}/>
         ));
       default:
         return (this.wrapPage(

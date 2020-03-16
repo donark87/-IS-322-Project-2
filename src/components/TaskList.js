@@ -1,6 +1,6 @@
 import React from 'react';
 
-import TaskItem from './TaskItem';
+import ListView from "./ListView";
 import Todo from "./ToDo";
 import InProgress from "./InProgress";
 import Review from "./Review";
@@ -9,11 +9,18 @@ import Done from "./Done";
 
 class TaskList extends React.Component {
 
+  /*  componentDidMount() {
+        this.render();
+    }
+
+    componentDidUpdate() {
+        this.render();
+    }*/
     markUp = (task) => {
-        let taskIndex = this.props.tasks.findIndex(t => t.id === task.id);
+
         let taskList = this.props.tasks;
         for (var i = 0; i < taskList.length; i++) {
-            if (taskList[i].id == (taskIndex + 1)) {
+            if (taskList[i].id == task.id) {
                 if(taskList[i].column == 'todo')
                 taskList[i].column = 'in-progress';
                 else if (taskList[i].column == 'in-progress')
@@ -24,13 +31,15 @@ class TaskList extends React.Component {
             }
         }
         //taskList.splice(taskIndex,1);
-        this.props.onUpdateTaskList(taskList);
+       this.props.onUpdateTaskList(taskList);
+        //this.setState({ tasks: taskList });
+
     }
     markDown = (task) => {
-        let taskIndex = this.props.tasks.findIndex(t => t.id === task.id);
+
         let taskList = this.props.tasks;
         for (var i = 0; i < taskList.length; i++) {
-            if (taskList[i].id == (taskIndex + 1)) {
+            if (taskList[i].id == task.id) {
                 if(taskList[i].column == 'done')
                     taskList[i].column = 'review';
                 else if (taskList[i].column == 'review')
@@ -41,7 +50,8 @@ class TaskList extends React.Component {
             }
         }
         //taskList.splice(taskIndex,1);
-        this.props.onUpdateTaskList(taskList);
+        //this.props.onUpdateTaskList(taskList);
+        this.setState({ tasks: taskList });
     }
 
 
