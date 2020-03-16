@@ -2,20 +2,12 @@ import React from 'react';
 
 
 import ListItem from "./ListItem";
-import TaskOption from "./TaskOption";
-import TaskList from "./TaskList";
+import ListViewFilter from "./ListViewFilter";
+
 
 class ListView extends React.Component {
 
-   componentDidMount() {
-        this.render();
-    }
-
-    componentDidUpdate() {
-        this.render();
-    }
-
-    orderBy = (value, props) => {
+    sortBy = (value, props) => {
        let ListView = this.props.tasks;
 
         ListView.sort(function (a, b) {
@@ -70,8 +62,7 @@ class ListView extends React.Component {
 
     render() {
 
-
-        const TaskOptions = <TaskOption task={this.props.tasks} orderBy={this.orderBy}  filterByStatus={this.filterByStatus} filterByType={this.filterByType}/>
+        const ListViewFilters = <ListViewFilter task={this.props.tasks} sortBy={this.sortBy}  filterByStatus={this.filterByStatus} filterByType={this.filterByType}/>
 
         const ListItems = this.props.tasks.map(task => {
             return <ListItem task={task} key={task.id} />
@@ -79,7 +70,7 @@ class ListView extends React.Component {
 
         return (
            <div>
-            {TaskOptions}
+            {ListViewFilters}
             <table className="table">
                 <thead className="thead-dark">
                 <tr>

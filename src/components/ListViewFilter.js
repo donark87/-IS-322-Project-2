@@ -1,5 +1,5 @@
 import React from 'react';
-class TaskOption extends React.Component {
+class ListViewFilter extends React.Component {
 
 
    constructor(props) {
@@ -12,12 +12,12 @@ class TaskOption extends React.Component {
         this.handleType = this.handleType.bind(this);
     }
     handleSubmit(event) {
-        this.props.orderBy(event.target.value);
+        this.props.sortBy(event.target.value);
     }
 
     handleSort(event) {
         this.setState({value: event.target.value});
-       this.props.orderBy(event.target.value);
+       this.props.sortBy(event.target.value);
    }
 
     handleStatus(event){
@@ -34,7 +34,6 @@ class TaskOption extends React.Component {
 
 
     render() {
-
 
         return (
 
@@ -77,4 +76,4 @@ class TaskOption extends React.Component {
     }
 };
 
-export default TaskOption;
+export default ListViewFilter;

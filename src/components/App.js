@@ -2,12 +2,10 @@ import React from 'react';
 import axios from 'axios';
 
 import PageTabs from './PageTabs';
-import TaskList from "./TaskList";
+import GridView from "./GridView";
 import ListView from "./ListView";
 import AddTask from "./AddTask"
-//import Page1 from './Page1';
-//import Page2 from './Page2';
-//import Page3 from './Page3';
+
 
 class App extends React.Component {
   state = {
@@ -67,7 +65,7 @@ class App extends React.Component {
     switch (view) {
       case 'page1':
         return (this.wrapPage(
-           <TaskList tasks={this.state.tasks} onUpdateTaskList={this.onUpdateTaskList} />
+           <GridView tasks={this.state.tasks} onUpdateTaskList={this.onUpdateTaskList} />
         ));
       case 'page2':
         return (this.wrapPage(

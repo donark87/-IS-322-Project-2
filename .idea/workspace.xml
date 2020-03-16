@@ -3,8 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="c95ec6c9-b34f-4f03-9d85-e3896266042c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/ListView.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ListView.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/TaskOption.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TaskOption.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/TaskList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/GridView.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/TaskOption.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ListViewFilters.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,7 +90,7 @@
       <workItem from="1584300305836" duration="4115000" />
       <workItem from="1584306383235" duration="14618000" />
       <workItem from="1584386343854" duration="2030000" />
-      <workItem from="1584388388391" duration="1072000" />
+      <workItem from="1584388388391" duration="1903000" />
     </task>
     <task id="LOCAL-00001" summary="Initial upload.">
       <created>1584049661719</created>
@@ -125,7 +127,14 @@
       <option name="project" value="LOCAL" />
       <updated>1584318876608</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Feature: Added filter function for List view page.">
+      <created>1584389691803</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1584389691803</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -137,7 +146,8 @@
     <MESSAGE value="Feature: added markDown function and updated markUp function." />
     <MESSAGE value="Feature: added ListView.js, ListItem.js and TaskOption.js" />
     <MESSAGE value="Feature: Added Add task from." />
-    <option name="LAST_COMMIT_MESSAGE" value="Feature: Added Add task from." />
+    <MESSAGE value="Feature: Added filter function for List view page." />
+    <option name="LAST_COMMIT_MESSAGE" value="Feature: Added filter function for List view page." />
   </component>
   <component name="WindowStateProjectService">
     <state x="2472" y="178" key="#Deployment" timestamp="1584049750275">
@@ -156,10 +166,10 @@
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="2610" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1584318820249" />
-    <state x="2505" y="110" key="CommitChangelistDialog2" timestamp="1584318875383">
+    <state x="2505" y="110" key="CommitChangelistDialog2" timestamp="1584389690719">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="2505" y="110" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1584318875383" />
+    <state x="2505" y="110" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1584389690719" />
     <state width="1899" height="348" key="GridCell.Tab.0.bottom" timestamp="1584150126165">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -228,10 +238,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1899" height="348" key="GridCell.Tab.3.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1584150126165" />
-    <state x="2472" y="253" key="Vcs.Push.Dialog.v2" timestamp="1584318885250">
+    <state x="2472" y="253" key="Vcs.Push.Dialog.v2" timestamp="1584389697624">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="2472" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1584318885250" />
+    <state x="2472" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1584389697624" />
     <state x="2689" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1584388631280">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>

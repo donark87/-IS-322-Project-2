@@ -7,16 +7,9 @@ import Review from "./Review";
 import Done from "./Done";
 
 
-class TaskList extends React.Component {
+class GridView extends React.Component {
 
-  /*  componentDidMount() {
-        this.render();
-    }
-
-    componentDidUpdate() {
-        this.render();
-    }*/
-    markUp = (task) => {
+      markUp = (task) => {
 
         let taskList = this.props.tasks;
         for (var i = 0; i < taskList.length; i++) {
@@ -30,9 +23,8 @@ class TaskList extends React.Component {
                 break;
             }
         }
-        //taskList.splice(taskIndex,1);
-       this.props.onUpdateTaskList(taskList);
-        //this.setState({ tasks: taskList });
+
+         this.setState({ tasks: taskList });
 
     }
     markDown = (task) => {
@@ -49,8 +41,7 @@ class TaskList extends React.Component {
                 break;
             }
         }
-        //taskList.splice(taskIndex,1);
-        //this.props.onUpdateTaskList(taskList);
+
         this.setState({ tasks: taskList });
     }
 
@@ -79,13 +70,10 @@ class TaskList extends React.Component {
                 <li className="list-group-item list-group-item"><h3>In Progress</h3> <ul className="list-group"> <li>{ InProgressList }</li></ul> </li>
                 <li className="list-group-item list-group-item-secondary"><h3>Review</h3> <ul className="list-group"> <li>{ ReviewList }</li></ul> </li>
                 <li className="list-group-item list-group-item"><h3>Done</h3> <ul className="list-group"> <li>{ DoneList }</li></ul> </li>
-
-
-
             </ul>
             </div>
         )
     }
 }
 
-export default TaskList;
+export default GridView;
